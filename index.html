@@ -11,6 +11,67 @@
      crossorigin="anonymous"></script>
      <link rel="shorcut icon" href="favicon.ico">
 	
+
+     
+    <meta charset="UTF-8">
+    <style>
+        label{
+            position: absolute;
+            width: 45px;
+            height: 22px;
+            right: 20px;
+            top: 20px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        label:before{
+            position: absolute;
+            content: '';
+            width:20px;
+            height: 20px;
+            left: 1px;
+            top: 1px;
+            border-radius: 50%;
+            background: #000;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        label.active:before{
+            left: 24px;
+            background: #fff;
+        }
+        body.night{
+            background: #000;
+            color: #fff;
+        }
+        @media screen and (min-width:900px) {
+          .respon{
+            display: flex;
+          }
+          img{
+            height:50%;
+            width:auto;
+            padding-top: 3vh;
+            padding-right: 5%;
+          }
+
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <label  id="dark-change"></label>
+  </header>
+  </main>
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
+</body>
 </head>
 
   <body>
@@ -19,8 +80,6 @@
 	
     <p>Welcome to <i>CherryDr.Pepper.com!</i></p>
     <p>Video games on Chromebook? Video games on Chromebook</p>
-    <p>This website looks better in Dark Mode chrome://flags/#enable-force-dark</p>
-  
 	<!-- Div align in the middle -->
       <div style="margin-left:auto;margin-right:auto;text-align:center">
          
